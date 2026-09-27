@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AnieWeb — Anime & Cartoons</title>
+  <meta name="description" content="AnieWeb — a fast, responsive anime and cartoons discovery website with language and genre filters.">
+  <meta name="theme-color" content="#09090f">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#" aria-label="AnieWeb home"><span class="brand-mark">A</span><span>Anie<span>Web</span></span></a>
+  <nav>
+    <a href="#home">Home</a><a href="#anime">Anime</a><a href="#cartoons">Cartoons</a><a href="#movies">Movies</a>
+  </nav>
+  <button id="searchBtn" class="icon-btn" aria-label="Search">⌕</button>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">WELCOME TO ANIEWEB</p>
+    <h1>Discover your next <em>anime</em> obsession.</h1>
+    <p class="sub">Browse anime, cartoons and movies by language, genre and popularity.</p>
+    <div class="hero-actions"><a class="primary" href="#anime">Explore Now</a><button class="secondary" id="randomBtn">Random Pick</button></div>
+  </div>
+  <div class="hero-art" aria-hidden="true"><div class="orb"></div><div class="hero-card c1">⚔️</div><div class="hero-card c2">🌙</div><div class="hero-card c3">🔥</div></div>
+</section>
+
+<section class="section" id="anime">
+  <div class="section-head"><div><p class="eyebrow">EXPLORE</p><h2>Browse Library</h2></div><div class="search-wrap"><input id="search" placeholder="Search anime, movies..." autocomplete="off"><span>⌕</span></div></div>
+  <div class="chips" id="languages"></div>
+  <div class="chips" id="genres"></div>
+  <div class="grid" id="grid"></div>
+  <p id="empty" class="empty hidden">No titles found. Try another search or filter.</p>
+</section>
+
+<section class="section dark" id="cartoons">
+  <div class="section-head"><div><p class="eyebrow">JUST FOR FUN</p><h2>Cartoon Corner</h2></div></div>
+  <div class="mini-grid" id="cartoonGrid"></div>
+</section>
+
+<section class="section" id="movies">
+  <div class="section-head"><div><p class="eyebrow">FEATURED</p><h2>Anime Movies</h2></div></div>
+  <div class="grid" id="movieGrid"></div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="brand-mark">A</span><span>Anie<span>Web</span></span></div><p>© 2026 AnieWeb. Discovery platform. Use official services to watch licensed content.</p><div><a href="#">Privacy</a><a href="#">Terms</a></div></footer>
+
+<div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-backdrop" id="closeModal"></div><div class="modal-box">
+    <button class="close" id="closeX" aria-label="Close">×</button>
+    <div id="modalPoster" class="modal-poster"></div>
+    <div class="modal-info"><p class="eyebrow" id="modalMeta"></p><h2 id="modalTitle"></h2><p id="modalDesc"></p>
+    <div class="modal-actions"><a id="watchBtn" class="primary" target="_blank" rel="noopener">Find official streaming</a><button class="secondary" id="favBtn">♡ Add to favorites</button></div></div>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
